@@ -7,6 +7,7 @@ require_relative "Task.rb"
 end
 
 command = ARGV.first
+command2 = ARGV[1] 
 	
 case command
 when "add" 
@@ -17,8 +18,8 @@ when "add"
 	list_tasks
 when "list"
 	list_tasks
-when "delete"
-	list_tasks
+when "complete"
+	Task.complete_task(command2.to_i)
 else 
 	print("Re-type command: ")
 	abort

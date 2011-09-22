@@ -20,8 +20,8 @@ when "list"
 	list_tasks
 when "complete"
 	Task.complete_task(command2.to_i)
+  list_tasks
 else 
 	print("Re-type command: ")
 	abort
-end
-	
+end	

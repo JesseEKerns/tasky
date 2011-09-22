@@ -1,3 +1,7 @@
-Go Shopping
-Clean the Garage
+Write
+Write
+Write
 Sleep
+Say which task is complete.
+Give a randomized congrats message.
+Interactive tasky prompt.

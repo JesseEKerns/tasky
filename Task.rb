@@ -1,5 +1,6 @@
 class Task
-	def initialize(task_string)
+	
+  def initialize(task_string)
 		@name = task_string
 	end
 	
@@ -23,18 +24,7 @@ class Task
 			line_array.delete_at(task_number - 1)
 		File.open("Tasks.txt", "w") do |file|
 			line_array.each{|line| file.puts(line)}
-		end	
-		#delete the line
-		puts "Completed line #{task_number}! You rock!" 
+    end    	
+		puts "Completed #{task_number}! You rock!" 
 	end
 end
-
-# def delete_lines_from_file(filename, lines_to_delete)
-  # line_arr = File.readlines(filename)
-  # lines_to_delete.each do |index|
-    # line_arr.delete_at(index)
-  # end 
-  # File.open(filename, "w") do |f| 
-    # line_arr.each{|line| f.puts(line)}
-  # end
-# end

@@ -1,7 +1,10 @@
 Write
 Write
 Write
-Sleep
+Write
+Write
+Write
+Write
 Say which task is complete.
 Give a randomized congrats message.
 Interactive tasky prompt.

@@ -25,6 +25,13 @@ class Task
 		File.open("Tasks.txt", "w") do |file|
 			line_array.each{|line| file.puts(line)}
     end    	
-		puts "Completed #{task_number}! You rock!" 
-	end
+    
+    puts "You completed task number #{task_number}!"
+    
+    cmessages = ["Rock On!", "Fuck Yeah!", "Woot woot!"]
+    1.times do  
+      congrats = cmessages[rand(3)]
+      puts congrats
+    end  
+  end  
 end

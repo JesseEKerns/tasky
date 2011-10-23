@@ -11,27 +11,29 @@ class Task
 	end
 	
 	def self.list_tasks
-		File.open("Tasks.txt", "r") do |file|
-			file.each_line do |line| 
-				puts "#{file.lineno}: #{line}"
-			end
-		end
-	end
+    File.open("Tasks.txt", "r") do |file|
+      file.each_line do |line| 
+        puts "#{file.lineno}: #{line}"
+      end
+    end
+  end
 	
-	def self.complete_task(task_number)
-		#open the file 
-		line_array = File.readlines("Tasks.txt")
-			line_array.delete_at(task_number - 1)
+  def self.complete_task(task_number)
+    #open the file 
+    line_array = File.readlines("Tasks.txt")
+      line_array.delete_at(task_number - 1)
 		File.open("Tasks.txt", "w") do |file|
 			line_array.each{|line| file.puts(line)}
     end    	
     
     puts "You completed task number #{task_number}!"
     
-    cmessages = ["Rock On!", "Fuck Yeah!", "Woot woot!"]
-    1.times do  
-      congrats = cmessages[rand(3)]
-      puts congrats
-    end  
-  end  
+    print_congrats
+    
+  end
+  def self.print_congrats
+    cmessages = ["Rock On!", "Oh Yeah!", "Woot woot!", "Ohhh"]
+    congrats = cmessages.sample
+    puts congrats
+  end
 end

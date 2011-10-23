@@ -1,10 +1,9 @@
-Write
-Write
-Write
-Write
-Write
-Write
-Write
-Say which task is complete.
-Give a randomized congrats message.
+Test
+Test
+Test
+Test
+Test
+Test
+Test
+Test
 Interactive tasky prompt.

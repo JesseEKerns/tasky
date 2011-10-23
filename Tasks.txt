@@ -4,6 +4,4 @@ Test
 Test
 Test
 Test
-Test
-Test
 Interactive tasky prompt.

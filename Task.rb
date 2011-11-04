@@ -21,13 +21,12 @@ class Task
   def self.complete_task(task_number)
   #open the file 
     line_array = File.readlines("Tasks.txt")
-    line_array.delete_at(task_number - 1)
+    deleted = line_array.delete_at(task_number - 1).chomp
     File.open("Tasks.txt", "w") do |file|
       line_array.each{|line| file.puts(line)}
-    end    	
-
-    puts "You completed task number #{task_number}!"
-
+    end
+   
+    puts "You completed task '#{deleted}'!"
     print_congrats
 
   end
